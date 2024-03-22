@@ -1,0 +1,89 @@
+@import '../App.css';
+
+.form {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form .form-element{
+    min-width: 150px;
+    margin: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 2px solid white; */
+}
+
+.style-card {
+    display: flex;
+    position: relative;
+    background-color: rgb(16 16 16);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    /* margin: 10px; */
+}
+
+.style-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 4rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.style-card-content>h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.style-card-content>h3 {
+    color: #a100ff;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+}
+
+.style-card-content>p {
+    color: rgba(224, 223, 223, 0.75);
+    line-height: 1.5rem;
+}
+
+.style-card:after {
+    content: "";
+    height: 100px;
+    width: 2px;
+    position: absolute;
+    left: -1px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, #a100ff, transparent);
+    opacity: 0;
+}
+
+.style-card:after {
+    top: 65%;
+    opacity: 0;
+}
+
+.style-card:hover:after {
+    top: 25%;
+    opacity: 1;
+}
